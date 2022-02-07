@@ -1,0 +1,20 @@
+artifact_path: model
+flavors:
+  python_function:
+    env: conda.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    python_version: 3.8.10
+  sklearn:
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: '1.0'
+model_uuid: c952d35ec3d0435587d2779772a423be
+run_id: a50aa8f4860844daba9aef6c89bd8992
+utc_time_created: '2022-02-07 18:16:03.649215'
+
+entry_points:
+  main:
+    parameters:
+      c: {type: float, default: 0.1}
+    command: "python train.py -c {c}"
